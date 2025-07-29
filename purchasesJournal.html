@@ -20,44 +20,72 @@
       class="container is-flex is-justify-content-center"
       style="margin-top: 40px"
     >
-      <form action="">
+      <form id="form">
         <div class="field">
-          <label class="label">Invoice Number</label>
-          <div class="field">
-            <input class="input" type="text" readonly />
+          <label for="invoice" class="label">Invoice Number</label>
+          <div class="control">
+            <input
+              class="input"
+              type="text"
+              readonly
+              id="invoice"
+              name="invoice"
+              value=""
+            />
           </div>
         </div>
         <div class="field">
-          <label class="label">Date of purchase</label>
+          <label for="date" class="label">Date of purchase</label>
           <div class="field">
-            <input class="input" type="date" />
+            <input class="input" type="date" name="date" id="date" required />
           </div>
         </div>
 
         <div class="field">
-          <label class="label">Supplier's Name</label>
+          <label class="label" for="supplierName">Supplier's Name</label>
           <div class="control has-icons-left has-icons-right">
-            <input class="input" type="text" placeholder="David Kimani" />
+            <input
+              required
+              class="input"
+              type="text"
+              placeholder="David Kimani"
+              id="supplierName"
+              name="supplierName"
+            />
           </div>
         </div>
 
         <div class="field">
-          <label class="label">Item Name</label>
+          <label class="label" for="itemName">Item Name</label>
           <div class="control has-icons-left has-icons-right">
-            <input class="input" type="text" placeholder="printer paper" />
+            <input
+              required
+              class="input"
+              type="text"
+              placeholder="printer paper"
+              name="itemName"
+              id="itemName"
+            />
           </div>
         </div>
         <div class="field">
-          <label class="label">Item Quatity</label>
+          <label class="label" for="itemQuantity">Item Quatity</label>
           <div class="control has-icons-left has-icons-right">
-            <input class="input" type="text" placeholder="printer paper" />
+            <input
+              required
+              class="input"
+              type="number"
+              placeholder="printer paper"
+              name="itemQuantity"
+              id="itemQuantity"
+            />
           </div>
         </div>
         <div class="field">
-          <label class="label">Quatity Measure</label>
+          <label class="label" for="quantityMeasure">Quatity Measure</label>
           <div class="control">
             <div class="select">
-              <select>
+              <select id="quantityMeasure" name="quantityMeasure" required>
                 <option>Pieces</option>
                 <option>KG</option>
                 <option>Pages</option>
@@ -73,5 +101,6 @@
         </div>
       </form>
     </div>
+    <script src="/js/purchasesJournal.js"></script>
   </body>
 </html>
