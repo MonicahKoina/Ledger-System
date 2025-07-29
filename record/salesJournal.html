@@ -3,9 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>purchases Journal</title>
+    <title>Sales Journal</title>
     <link rel="stylesheet" href="bulma.min.css" />
     <style>
+      body {
+        background: linear-gradient(0deg, #d8f1d3, #ffffff);
+        min-height: 100vh;
+      }
       form {
         width: 400px;
       }
@@ -22,35 +26,34 @@
     >
       <form id="form">
         <div class="field">
-          <label for="invoice" class="label">Invoice Number</label>
-          <div class="control">
+          <label class="label" for="invoice">Invoice Number</label>
+          <div class="field">
             <input
               class="input"
               type="text"
               readonly
-              id="invoice"
               name="invoice"
-              value=""
+              id="invoice"
             />
           </div>
         </div>
         <div class="field">
-          <label for="date" class="label">Date of purchase</label>
+          <label class="label" for="date">Date of Sale</label>
           <div class="field">
             <input class="input" type="date" name="date" id="date" required />
           </div>
         </div>
 
         <div class="field">
-          <label class="label" for="supplierName">Supplier's Name</label>
+          <label class="label" for="customerName">Customer's Name</label>
           <div class="control has-icons-left has-icons-right">
             <input
-              required
               class="input"
               type="text"
               placeholder="David Kimani"
-              id="supplierName"
-              name="supplierName"
+              required
+              id="customerName"
+              name="customerName"
             />
           </div>
         </div>
@@ -59,11 +62,11 @@
           <label class="label" for="itemName">Item Name</label>
           <div class="control has-icons-left has-icons-right">
             <input
-              required
               class="input"
               type="text"
               placeholder="printer paper"
               name="itemName"
+              required
               id="itemName"
             />
           </div>
@@ -72,12 +75,12 @@
           <label class="label" for="itemQuantity">Item Quatity</label>
           <div class="control has-icons-left has-icons-right">
             <input
-              required
               class="input"
-              type="number"
+              type="text"
               placeholder="printer paper"
               name="itemQuantity"
               id="itemQuantity"
+              required
             />
           </div>
         </div>
@@ -95,12 +98,11 @@
             </div>
           </div>
         </div>
-
         <div class="conatiner is-flex is-justify-content-center">
-          <button class="button is-primary">Save Purchase</button>
+          <button class="button is-primary">Save Sale</button>
         </div>
       </form>
     </div>
-    <script src="/js/purchasesJournal.js"></script>
+    <script src="/js/salesJournal.js"></script>
   </body>
 </html>
