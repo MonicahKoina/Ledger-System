@@ -5,6 +5,7 @@ let date = document.getElementById("date")
 let itemName = document.getElementById("itemName")
 let itemQuantity = document.getElementById("itemQuantity")
 let quantityMeasure = document.getElementById("quantityMeasure")
+let amount = document.getElementById("amount")
 function generateInvoice() {
     return invoice.value = "SALE-" + crypto.randomUUID().slice(0, 8).toUpperCase()
 }
@@ -17,7 +18,8 @@ form.addEventListener("submit", function (e) {
         customerName: customerName.value,
         itemName: itemName.value,
         itemQuantity: itemQuantity.value,
-        quantityMeasure: quantityMeasure.value
+        quantityMeasure: quantityMeasure.value,
+        amount: amount.value
     }
     let savedSales = JSON.parse(localStorage.getItem("savedPurchases")) || []
     savedSales.push(sales)

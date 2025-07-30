@@ -5,6 +5,7 @@ let supplierName = document.getElementById("supplierName")
 let itemName = document.getElementById("itemName")
 let itemQuantity = document.getElementById("itemQuantity")
 let quantityMeasure = document.getElementById("quantityMeasure")
+let amount = document.getElementById("amount")
 function generateInvoice() {
     return invoice.value = "PUR-" + crypto.randomUUID().slice(0, 8).toUpperCase();
 }
@@ -18,6 +19,7 @@ form.addEventListener("submit", function (e) {
         itemName: itemName.value,
         itemQuantity: itemQuantity.value,
         quantityMeasure: quantityMeasure.value,
+        amount: amount.value
     }
     let savedPurchase = JSON.parse(localStorage.getItem("savedPurchase")) || []
     savedPurchase.push(purchase)

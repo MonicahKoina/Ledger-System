@@ -1,6 +1,5 @@
 let section = document.getElementById("section")
 
-
 const savedSales = JSON.parse(localStorage.getItem("savedSales")) || []
 if (savedSales.length === 0) {
     const emptyMessage = document.createElement("p")
@@ -16,6 +15,7 @@ if (savedSales.length === 0) {
         <p class="mb-2"><strong>Item Name:</strong> ${sale.itemName} </p>
         <p class="mb-2"><strong>Item Quantity:</strong> ${sale.itemQuantity}</p>
         <p class="mb-2"><strong>Quantity Measured In:</strong> ${sale.quantityMeasure}</p>
+        <p class="mb-2"><strong>Amount in shillings :</strong> KES ${sale.amount}</p>
         `
     })
 }
