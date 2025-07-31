@@ -4,12 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../bulma.min.css" />
+    <style>
+      .card {
+        width: 360px;
+        margin-top: 20px;
+        padding: 10px;
+      }
+      .input {
+        width: 200px;
+      }
+    </style>
     <title>Purchases</title>
   </head>
   <body>
-    <section class="section" id="section">
-      <div class="card" id="card"></div>
-    </section>
+    <div class="container has-text-centered" style="margin-top: 10px">
+      <input
+        class="input"
+        type="text"
+        placeholder="Search purchase"
+        name="search"
+        id="search"
+      />
+    </div>
+    <section
+      class="section"
+      id="section"
+      style="display: flex; gap: 2em; flex-wrap: wrap"
+    ></section>
     <script src="../js/purchaseList.js"></script>
   </body>
 </html>
