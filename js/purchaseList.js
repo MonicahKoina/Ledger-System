@@ -29,17 +29,11 @@ search.addEventListener("input", () => {
         purchase.itemName.toLowerCase().includes(searchText) ||
         purchase.supplierName.toLowerCase().includes(searchText)
     );
-
-    // Clear the current cards
     section.innerHTML = "";
-
-    // If nothing matches
     if (filtered.length === 0) {
         section.innerHTML = "<p>No results found.</p>";
         return;
     }
-
-    // Re-render filtered results
     filtered.forEach((purchase) => {
         let card = document.createElement("div");
         card.className = "card";
