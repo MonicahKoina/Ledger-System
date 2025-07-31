@@ -20,6 +20,26 @@
     </style>
   </head>
   <body>
+    <div class="tabs is-centered is-boxed">
+      <div><a href="/" type="button is-light ">Home</a></div>
+      <ul>
+        <li class="is-active">
+          <a href="/record/salesJournal.html">
+            <span>Record Sale</span>
+          </a>
+        </li>
+        <li>
+          <a href="/journals/sales.html">
+            <span>View Sales</span>
+          </a>
+        </li>
+        <li>
+          <a href="/ledgers/salesLedger.html">
+            <span>Sales Ledger</span>
+          </a>
+        </li>
+      </ul>
+    </div>
     <div
       class="container is-flex is-justify-content-center"
       style="margin-top: 40px"
@@ -77,7 +97,7 @@
             <input
               class="input"
               type="text"
-              placeholder="printer paper"
+              placeholder="10"
               name="itemQuantity"
               id="itemQuantity"
               required
