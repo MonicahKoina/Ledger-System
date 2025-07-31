@@ -21,7 +21,7 @@ form.addEventListener("submit", function (e) {
         quantityMeasure: quantityMeasure.value,
         amount: amount.value
     }
-    let savedSales = JSON.parse(localStorage.getItem("savedPurchases")) || []
+    let savedSales = JSON.parse(localStorage.getItem("savedSales")) || []
     savedSales.push(sales)
     localStorage.setItem("savedSales", JSON.stringify(savedSales))
     form.reset()
