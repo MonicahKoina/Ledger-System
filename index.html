@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="bulma.min.css" />
+    <link
+      href="https://cdn.boxicons.com/fonts/basic/boxicons.min.css"
+      rel="stylesheet"
+    />
     <title>Ledger System</title>
     <style>
       .button {
@@ -25,24 +29,74 @@
     </style>
   </head>
   <body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item"> Home </a>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link"> Record Transactions </a>
+            <div class="navbar-dropdown">
+              <a class="navbar-item" href="record/salesJournal.html">
+                Sales Form</a
+              >
+              <a
+                class="navbar-item is-selected"
+                href="record/purchasesJournal.html"
+              >
+                Purchases Form
+              </a>
+              <a class="navbar-item" href="/record/returnInwards.html">
+                Goods Returned By customer
+              </a>
+              <a class="navbar-item" href="/record/returnOutwards.html"
+                >Return Goods to seller</a
+              >
+            </div>
+          </div>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link"> View Transactions </a>
+            <div class="navbar-dropdown">
+              <a class="navbar-item" href="journals/sales.html"> Sales</a>
+              <a class="navbar-item is-selected" href="journals/purchases.html">
+                Purchases
+              </a>
+              <a class="navbar-item" href="/journals/returnsInwards.html">
+                Goods Returned By customer
+              </a>
+              <a class="navbar-item" href="journals/returnOutward.html"
+                >Goods Returned To Seller</a
+              >
+            </div>
+          </div>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link"> Ledger Accounts </a>
+            <div class="navbar-dropdown">
+              <a class="navbar-item" href="ledgers/salesLedger.html">
+                Sales Ledger</a
+              >
+              <a
+                class="navbar-item is-selected"
+                href="ledgers/purchasesLedger.html"
+              >
+                Purchases Ledger
+              </a>
+              <a class="navbar-item" href="ledgers/generalLedger.html">
+                General Ledger
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
     <section class="section">
       <div class="container has-text-centered" style="margin-top: 40px">
-        <h1 class="title">👋🏼 Welcome Back!</h1>
-        <h2 class="subtitle">What would you like to do today?</h2>
-        <div
-          class="is-flex is-flex-direction-column is-align-items-center is-justify-content-center"
-          style="gap: 2em"
-        >
-          <a href="/record/recordtransactions.html" class="button is-success"
-            >Record a trasaction</a
-          >
-          <a href="/journals/viewJournal.html" class="button is-link"
-            >View All Sales and Puchases</a
-          >
-          <a href="/ledgers/viewLedger.html" class="button is-warning"
-            >View Ledger Accounts</a
-          >
-        </div>
+        <h1 class="title">👋🏼 Hey there!</h1>
+        <h2 class="subtitle">
+          Need to record a credit transaction or review your books? Let’s go!
+        </h2>
+        <p class="has-text-grey mt-2">
+          Use the menu above to explore more options anytime.
+        </p>
       </div>
     </section>
   </body>
