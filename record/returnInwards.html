@@ -6,32 +6,160 @@
     <link rel="stylesheet" href="../bulma.min.css" />
     <title>Return Inwards</title>
     <style>
-      .input {
-        width: 260px;
+      form {
+        width: 500px;
+        padding: 2em;
+        border-radius: 12px;
       }
-      .card {
-        width: 260px;
-        padding: 10px;
+      .input[readonly] {
+        background-color: #f5f5f5;
+      }
+      .button {
+        margin-top: 1.5em;
       }
     </style>
   </head>
-
   <body>
-    <div class="container has-text-centered" style="margin-top: 10px">
-      <input
-        type="text"
-        class="input"
-        placeholder="Search Sale "
-        id="search"
-        name="search"
-      />
-    </div>
-
-    <section
-      class="section is-flex is-flex-wrap-wrap"
-      id="section"
-      style="gap: 2em"
-    ></section>
+    <section id="section">
+      <div class="container is-flex is-justify-content-center">
+        <form id="form">
+          <div class="field is-horizontal">
+            <div class="field-body">
+              <div class="field">
+                <label class="label">Return Invoice #</label>
+                <div class="control">
+                  <input
+                    type="text"
+                    class="input"
+                    readonly
+                    id="invoice"
+                    name="invoice"
+                  />
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Return Date</label>
+                <div class="control">
+                  <input
+                    type="date"
+                    class="input"
+                    id="date"
+                    name="date"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Select Sale</label>
+            <div class="control">
+              <input
+                type="text"
+                class="input"
+                id="search"
+                name="search"
+                placeholder="Search by invoice or customer"
+                required
+              />
+            </div>
+          </div>
+          <div class="field is-horizontal">
+            <div class="field-body">
+              <div class="field">
+                <label class="label">Sale Invoice</label>
+                <div class="control">
+                  <input
+                    type="text"
+                    class="input"
+                    readonly
+                    id="saleInvoice"
+                    placeholder="Sale Invoice"
+                  />
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Sale Date</label>
+                <div class="control">
+                  <input
+                    type="text"
+                    class="input"
+                    readonly
+                    id="saleDate"
+                    placeholder="Sale Date"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="field is-horizontal">
+            <div class="field-body">
+              <div class="field">
+                <label class="label">Customer Name</label>
+                <div class="control">
+                  <input
+                    type="text"
+                    class="input"
+                    readonly
+                    id="customerName"
+                    placeholder="Customer"
+                  />
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Item Name</label>
+                <div class="control">
+                  <input
+                    type="text"
+                    class="input"
+                    readonly
+                    id="itemName"
+                    placeholder="Item"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="field is-horizontal">
+            <div class="field-body">
+              <div class="field">
+                <label class="label">Quantity</label>
+                <div class="control">
+                  <input
+                    type="number"
+                    class="input"
+                    readonly
+                    id="itemQantity"
+                    placeholder="Qty"
+                  />
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Unit</label>
+                <div class="control">
+                  <input
+                    type="text"
+                    class="input"
+                    readonly
+                    id="quantityMeasure"
+                    placeholder="e.g., pcs, kg"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Return Amount</label>
+            <div class="control">
+              <input type="number" class="input" readonly id="amount" />
+            </div>
+          </div>
+          <div class="field has-text-centered">
+            <button class="button is-fullwidth">Return Sale</button>
+          </div>
+        </form>
+      </div>
+    </section>
     <script src="/js/returnInwardsJournal.js"></script>
   </body>
 </html>
