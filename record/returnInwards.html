@@ -7,7 +7,7 @@
     <title>Return Inwards</title>
     <style>
       form {
-        width: 500px;
+        width: 400px;
         padding: 2em;
         border-radius: 12px;
       }
@@ -17,11 +17,40 @@
       .button {
         margin-top: 1.5em;
       }
+      #results {
+        background-color: #ffffff;
+        border: 1px solid #dbdbdb;
+        border-radius: 6px;
+        margin-top: 0.5em;
+        padding: 0.5em;
+      }
+      #results div {
+        padding: 0.4em;
+        cursor: pointer;
+      }
+      #results div:hover {
+        background-color: #f0f0f0;
+      }
+      .card {
+        padding: 6px;
+        width: 400px;
+      }
     </style>
   </head>
   <body>
+    <div class="tabs is-centered is-boxed">
+      <div><a href="/" class="button is-light">Home</a></div>
+      <ul>
+        <li class="is-active">
+          <a href="/record/returnInwards.html"><span>Record Returns</span></a>
+        </li>
+        <li>
+          <a href="/journals/returnsInwards.html"><span>View Returns</span></a>
+        </li>
+      </ul>
+    </div>
     <section id="section">
-      <div class="container is-flex is-justify-content-center">
+      <div class="container is-flex" style="justify-content: space-between">
         <form id="form">
           <div class="field is-horizontal">
             <div class="field-body">
@@ -129,7 +158,7 @@
                     type="number"
                     class="input"
                     readonly
-                    id="itemQantity"
+                    id="itemQuantity"
                     placeholder="Qty"
                   />
                 </div>
@@ -148,16 +177,38 @@
               </div>
             </div>
           </div>
-          <div class="field">
-            <label class="label">Return Amount</label>
-            <div class="control">
-              <input type="number" class="input" readonly id="amount" />
+          <div class="field is-horizontal">
+            <div class="field-body">
+              <div class="field">
+                <label class="label">Return Amount</label>
+                <div class="control">
+                  <input
+                    type="number"
+                    class="input"
+                    readonly
+                    id="amount"
+                    placeholder="Amount"
+                  />
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Reason</label>
+                <div class="control">
+                  <input
+                    type="text"
+                    class="input"
+                    id="reason"
+                    placeholder="e.g., Damaged Good"
+                  />
+                </div>
+              </div>
             </div>
           </div>
           <div class="field has-text-centered">
-            <button class="button is-fullwidth">Return Sale</button>
+            <button class="button is-fullwidth is-primary">Return Sale</button>
           </div>
         </form>
+        <div class="card" id="card"></div>
       </div>
     </section>
     <script src="/js/returnInwardsJournal.js"></script>
