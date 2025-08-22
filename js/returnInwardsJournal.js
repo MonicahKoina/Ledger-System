@@ -67,6 +67,7 @@ search.addEventListener("input", () => {
             amount.value = sale.amount;
         });
 
+        button.className = ""
         card.appendChild(button);
         resultCard.appendChild(card);
     });
